@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <script type="text/javascript" src="js/Parser.js"></script>
+    <script type="text/javascript" src="js/lang.js"></script>
+    <div class="container">
+        <form name="calculator">
+            <input type="" id="scn" size="10" readonly maxlength="50" name="display" class="screen">
+        </form>
+        <div class="container shape">
+            <div class="breaks">
+                <input type="button" value="shift" class="bt blue" id="to_shift" onclick="Shift()">
+                <input type="button" value="sin" class="bt black" id="sin" onclick="handleTrig(this.value)">
+                <input type="button" value="cos" class="bt black" id="cos" onclick="handleTrig(this.value)">
+                <input type="button" value="tan" class="bt black" id="tan" onclick="handleTrig(this.value)">
+                <input type="button" value="log" class="bt black" onclick="handleTrig(this.value)">
+            </div>
+            <div class="breaks">
+                <input type="button" value="√" class="bt silver" onclick="handleOperator(this.value+'(')">
+                <input type="button" value="^" class="bt silver" onclick="handleOperator(this.value)">
+                <input type="button" value="mod" class="bt silver" onclick="handleOperator(this.value)">
+                <input type="button" value="abs" class="bt silver" onclick="handleTrig(this.value)">
+                <input type="button" value="ln" class="bt silver" onclick="handleTrig(this.value)">
+            </div>
+            <div class="breaks">
+                <input type="button" value="%" onclick="handleOperator(this.value)">
+                <input type="button" value="(" onclick="AddBrace(this.value)">
+                <input type="button" value=")" onclick="AddBrace(this.value)">
+                <input type="button" value="!" onclick="handleOperator(this.value)">
+                <input type="button" value="±" onclick="negate()">
+            </div>
+            <div class="breaks">
+                <input type="button" value="7" class="work" onclick="AddValue(this.value)">
+                <input type="button" value="8" class="work" onclick="AddValue(this.value)">
+                <input type="button" value="9" class="work" onclick="AddValue(this.value)">
+                <input type="button" value="Del" id="red" onclick="Del()">
+                <input type="button" value="Clr" id="red" onclick="Clear()">
+            </div>
+            <div class="breaks ">
+                <input type="button" value="4" class="work white" onclick="AddValue(this.value)">
+                <input type="button" value="5" class="work white" onclick="AddValue(this.value)">
+                <input type="button" value="6" class="work white" onclick="AddValue(this.value)">
+                <input type="button" value="x" onclick="handleOperator(this.value)">
+                <input type="button" value="÷" id="normal" onclick="handleOperator(this.value)">
+            </div>
+            <div class="breaks">
+                <input type="button" value="1" class="work white" onclick="AddValue(this.value)">
+                <input type="button" value="2" class="work white" onclick="AddValue(this.value)">
+                <input type="button" value="3" class="work white" onclick="AddValue(this.value)">
+                <input type="button" value="+" class="white" onclick="handleOperator(this.value)">
+                <input type="button" value="-" class="white" onclick="handleOperator(this.value)">
+            </div>
+            <div class="breaks">
+                <input type="button" value="e" class="work white" id="exp" onclick="handleConst(this.value)">
+                <input type="button" value="0" class="work white" onclick="AddValue(this.value)">
+                <input type="button" value="." class="work white" onclick="AddPoint(this.value)">
+                <input type="button" value="π" class="bt white" onclick="handleConst(this.value)">
+                <input type="button" value="=" class="bt white" id="eval" onclick="Evaluate()">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

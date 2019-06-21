@@ -1,0 +1,79 @@
+/* @font-face {
+    font-family: Title;
+    src: url(fonts/calculator.ttf);
+} */
+@font-face {
+    font-family: 'Digital-7';
+    src: url('digital-7/digital-7.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background: #e8e8e9;
+}
+
+input[type="button"] {
+    border: 0px solid #ccc;
+    padding: 15px;
+    width: 5vw;
+    box-shadow: 1.5px 1.6px 5px -2.9px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    width: 30.5vw;
+    align-items: center;
+    margin: 30px auto;
+    padding: 0;
+}
+
+.work {
+    background: rgb(27, 20, 20);
+    color: #fff;
+}
+
+.shape {
+    /* background: red; */
+    /* margin-bottom: 50px; */
+    height: 66vh;
+}
+
+.breaks {
+    display: flex;
+    width: 30.5vw;
+    /* margin-top: 10px; */
+    margin-bottom: 20px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.screen {
+    width: 30vw;
+    height: 15vh;
+    background: rgb(27, 20, 20);
+    font-family: Digital-7;
+    font-size: 34px;
+    color: #fff;
+    text-align: right;
+}
+
+.inputs {
+    display: flex;
+}
+
+#red {
+    background: rgb(153, 6, 6);
+    color: #fff;
+}
+
+#normal {
+    background: rgb(216, 215, 215);
+    border: 0px solid #ccc;
+    padding: 15px;
+    width: 5vw;
+    box-shadow: 1.5px 1.6px 5px -2.9px;
+}
